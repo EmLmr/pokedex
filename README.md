@@ -5,7 +5,7 @@ This app will allow users to view a list of Pokemons and see more details on eac
 
 
 ## Required features & Technical requirements
-* Load data from the external Pokémon API [link to PokéAPI](https://pokeapi.co/docs/v2).
+* Load data from the external [Pokémon API](https://pokeapi.co/docs/v2).
 * Display a list of Pokémon loaded from the API after the page is loaded.
 * On user action (such as by clicking on a Pokémon item), view more details for the Pokémon.
 * The app *must* have CSS styling.
