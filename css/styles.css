@@ -1,0 +1,50 @@
+/*
+TITLES:
+font-family: 'Press Start 2P', cursive;
+
+MAIN TEXT:
+font-family: 'IBM Plex Mono', monospace;
+*/
+
+:root {
+  --pkm-red: #FF0000;
+  --pkm-red-dark: #CC0000;
+  --pkm-blue: #3B4CCA;
+  --pkm-yellow: #FFDE00;
+  --pkm-yellow-dark:  #B3A125;
+  --font-size-main: 16px;
+  --heading-big: 35px;
+  --heading-med: 25px;
+  --heading-small: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  font-size: var(--heading-big);
+}
+
+h2 {
+  font-size: var(--heading-med);
+}
+
+h3 {
+  font-size: var(--heading-smal);
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--font-size-main);
+  text-align: center;
+
+}
+
+.page-header {
+  background-color: var(--pkm-red-dark);
+  padding: 15px;
+  margin-bottom: 20px;
+}
