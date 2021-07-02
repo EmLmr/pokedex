@@ -1,10 +1,9 @@
 // Pokemon data to display in app.
-const pokemonList = [
-  {
-  name: 'Bulbasaur',
-  height: 2,
-  types: ['grass', 'poison'],
-  abilities: 'overgrow'
+const pokemonList = [{
+    name: 'Bulbasaur',
+    height: 2,
+    types: ['grass', 'poison'],
+    abilities: 'overgrow'
   },
   {
     name: 'Urshifu',
@@ -32,14 +31,13 @@ const pokemonList = [
   }
 ];
 
-for (let i=0; i < pokemonList.length; i++) {
+pokemonList.forEach(function(pokemon) {
   // Display looped Pokémon on the DOM, with a line break.
-  document.write('<br>' + '<h1>' + pokemonList[i].name + '</h1>' + ` (height: ${pokemonList[i].height}) `);
-
+  document.write('<br>' + '<h1>' + pokemon.name + '</h1>' + ` (height: ${pokemon.height}) `);
   //Conditional loop; checks if height is greater than 5.
-  if (pokemonList[i].height > 5) {
-    document.write( '- WOW that\'s a big boi!');
+  if (pokemon.height > 5) {
+    document.write('- WOW that\'s a big boi!');
   }
   //Add line break after each Pokemon.
   document.write('<br>')
-}
+});
