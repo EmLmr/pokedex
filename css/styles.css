@@ -6,6 +6,8 @@ MAIN TEXT:
 font-family: 'IBM Plex Mono', monospace;
 */
 
+
+/* GENERAL SETUP */
 :root {
   --pkm-red: #FF0000;
   --pkm-red-dark: #CC0000;
@@ -58,12 +60,14 @@ button {
   border-radius: 30px;
 }
 
+/* HEADER */
 .page-header {
   background-color: var(--pkm-red-dark);
   padding: 15px;
   margin-bottom: 20px;
 }
 
+/* MAIN CONTENT - POKEMON LIST */
 .pokemon-list {
   display: grid;
   padding-left: 0;
@@ -82,8 +86,6 @@ button {
 
 }
 
-
-
 /* MEDIA QUERIES */
 @media all and (max-width: 670px) {
   .pokemon-list {
@@ -98,6 +100,6 @@ button {
   }
 }
 
-@media all and (max-width: 976px) {
+/* @media all and (max-width: 976px) {
 
-}
+} */
