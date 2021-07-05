@@ -83,7 +83,12 @@ button {
   width: 250px;
   padding: 20px;
   margin: 10px;
+}
 
+.list-item:hover,
+.list-item:focus {
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 /* MEDIA QUERIES */
