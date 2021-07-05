@@ -12,15 +12,21 @@ font-family: 'IBM Plex Mono', monospace;
   --pkm-blue: #3B4CCA;
   --pkm-yellow: #FFDE00;
   --pkm-yellow-dark:  #B3A125;
+  --dark-grey: #2f2828;
   --font-size-main: 16px;
   --heading-big: 30px;
   --heading-med: 25px;
   --heading-small: 20px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
-h3 {
+h3,
+li {
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -40,11 +46,58 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: var(--font-size-main);
   text-align: center;
+  background-color: var(--dark-grey);
+}
 
+li {
+  list-style: none;
+  margin: auto;
+}
+
+button {
+  border-radius: 30px;
 }
 
 .page-header {
   background-color: var(--pkm-red-dark);
   padding: 15px;
   margin-bottom: 20px;
+}
+
+.pokemon-list {
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 5px 20px;
+
+}
+
+.list-item {
+  background-color: var(--pkm-blue);
+  color: white;
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+
+}
+
+
+
+/* MEDIA QUERIES */
+@media all and (max-width: 670px) {
+  .pokemon-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 671px) and (max-width: 975px) {
+
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 976px) {
+
 }
