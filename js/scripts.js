@@ -51,7 +51,6 @@ let pokemonRepository = (function() {
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
       });
     }).catch(function(e) {
       console.error(e);
@@ -64,11 +63,17 @@ let pokemonRepository = (function() {
     return fetch(url).then(function(response) {
       return response.json();
     }).then(function(details) {
-      // Now we add the details to the item
+      // specifies the details we want to see
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = details.types;
-      item.abilities = details.abilities;
+      item.types = [];
+        for (let i = 0; i < details.types.length; i++) {
+          item.types.push(details.types[i].type.name);
+        }
+      item.abilities = [];
+        for (let i = 0; i < details.abilities.length; i++) {
+          item.abilities.push(details.abilities[i].ability.name);
+        }
     }).catch(function(e) {
       console.error(e);
     });
