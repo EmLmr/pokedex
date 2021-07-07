@@ -40,9 +40,11 @@ let pokemonRepository = (function() {
 
   // loads the Pokémon list from the API (name + url to details)
   function loadList() {
+    showLoadingMessage();
     return fetch(apiUrl).then(function(response) {
       return response.json();
     }).then(function(json) {
+      hideLoadingMessage();
       json.results.forEach(function(item) {
         let pokemon = {
           name: item.name,
@@ -57,10 +59,12 @@ let pokemonRepository = (function() {
 
   // loads Pokémon details
   function loadDetails(item) {
+    showLoadingMessage();
     let url = item.detailsUrl;
     return fetch(url).then(function(response) {
       return response.json();
     }).then(function(details) {
+      hideLoadingMessage();
       // specifies the details we want to see
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
@@ -82,6 +86,14 @@ let pokemonRepository = (function() {
     loadDetails(pokemon).then(function() {
       console.log(pokemon);
     });
+  }
+
+  function showLoadingMessage() {
+    document.querySelector('.loading-message').classList.add('visible');
+  }
+
+  function hideLoadingMessage() {
+    document.querySelector('.loading-message').classList.add('hidden');
   }
 
   return {

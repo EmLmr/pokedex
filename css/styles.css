@@ -67,6 +67,16 @@ button {
   margin-bottom: 20px;
 }
 
+/* MAIN CONTENT - LOADING MESSAGE */
+.visible {
+  color: white;
+  font-size: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
 /* MAIN CONTENT - POKEMON LIST */
 .pokemon-list {
   display: grid;
