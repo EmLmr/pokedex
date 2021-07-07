@@ -88,10 +88,12 @@ let pokemonRepository = (function() {
     });
   }
 
+// displays a loading message until the content has loaded
   function showLoadingMessage() {
     document.querySelector('.loading-message').classList.add('visible');
   }
 
+// hides the loading message as soon as the content is loaded
   function hideLoadingMessage() {
     document.querySelector('.loading-message').classList.add('hidden');
   }
