@@ -83,6 +83,7 @@ button {
   width: 250px;
   padding: 20px;
   margin: 10px;
+  text-transform: capitalize;
 }
 
 .list-item:hover,
