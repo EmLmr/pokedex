@@ -1,4 +1,4 @@
-// Pokemon data to display in app.
+// Pokémon data to display in app.
 let pokemonRepository = (function() {
 
   // Creates the modal
@@ -41,12 +41,12 @@ let pokemonRepository = (function() {
     document.querySelector('.loading-message').classList.add('hidden');
   }
 
-  // returns an array of all the Pokemon in pokemonList
+  // returns an array of all the Pokémon in pokemonList
   function getAll() {
     return pokemonList;
   }
 
-  // adds new Pokemon to the pokemonList array with a conditional to make sure the correct type of data is entered.
+  // adds new Pokémon to the pokemonList array with a conditional to make sure the correct type of data is entered.
   function add(pokemon) {
     if (
       typeof pokemon === 'object' &&
@@ -59,7 +59,7 @@ let pokemonRepository = (function() {
     }
   }
 
-  // function that adds the list of Pokemon to the DOM, as buttons in an unordered list.
+  // function that adds the list of Pokémon to the DOM, as buttons in an unordered list.
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
 
@@ -122,7 +122,7 @@ let pokemonRepository = (function() {
     });
   }
 
-  // for now, clicking on the Pokemon's button will print its details in the console
+  // clicking on the Pokémon's button will open the modal and show all the Pokémon details
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
       pokeName.innerHTML = pokemon.name;
@@ -140,13 +140,15 @@ let pokemonRepository = (function() {
     modalContainer.classList.add('is-visible');
   }
 
-  // closes the modal
+  // general function to close the modal
   function hideModal() {
     modalContainer.classList.remove('is-visible');
   }
 
+  // click event to close the modal
   modalClose.addEventListener('click', hideModal);
 
+  // pressing the ESC key closes the modal
   window.addEventListener('keydown', (e) => {
     let modalContainer = document.querySelector('#modal-container');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
@@ -154,6 +156,7 @@ let pokemonRepository = (function() {
     }
   });
 
+  // clicking outside of the modal closes it
   modalContainer.addEventListener('click', (e) => {
     let target = e.target;
     if (target === modalContainer) {
@@ -161,8 +164,7 @@ let pokemonRepository = (function() {
     }
   });
 
-
-
+  // display the separate Pokémon details inside the modal
   modal.appendChild(modalClose);
   modal.appendChild(pokeName);
   modal.appendChild(imageContainer);
