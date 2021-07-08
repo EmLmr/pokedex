@@ -16,9 +16,7 @@ font-family: 'IBM Plex Mono', monospace;
   --pkm-yellow-dark:  #B3A125;
   --dark-grey: #2f2828;
   --font-size-main: 16px;
-  --heading-big: 30px;
-  --heading-med: 25px;
-  --heading-small: 20px;
+  --heading-big: 35px;
 }
 
 * {
@@ -26,8 +24,6 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 h1,
-h2,
-h3,
 li {
   font-family: 'Press Start 2P', cursive;
 }
@@ -37,12 +33,8 @@ h1 {
   text-transform: capitalize
 }
 
-h2 {
-  font-size: var(--heading-med);
-}
-
-h3 {
-  font-size: var(--heading-smal);
+p {
+  font-size: 20px;
 }
 
 body {
@@ -144,11 +136,26 @@ button {
   text-decoration: underline;
 }
 
+.PokeImage {
+    width: 70%;
+}
 
 /* MEDIA QUERIES */
 @media all and (max-width: 670px) {
+  h1 {
+    font-size: 25px;
+  }
+
   .pokemon-list {
     grid-template-columns: 1fr;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .PokeImage {
+      width: 50%;
   }
 }
 
