@@ -18,10 +18,17 @@
     <img src="img/pokedex_logo.png" alt="MyPokédex logo, written in yellow on a dark red background." id="logo" />
   </header>
   <section>
-    <div class = "loading-message">
+    <div class="loading-message">
       <p>Please wait...</p>
     </div>
     <ul class="pokemon-list"></ul>
+    <div id='modal-container'>
+      <div class='modal'>
+        <button class='modal-close'>Close</button>
+        <!-- <h1>Modal title</h1>
+        <p>Modal text</p> -->
+      </div>
+    </div>
   </section>
   <script src="./js/promise-polyfill.js"></script>
   <script src="./js/fetch.umd.js"></script>

@@ -30,6 +30,7 @@ let pokemonRepository = (function() {
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('list-item');
+    button.id = 'poke-modal';
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
 
