@@ -129,7 +129,7 @@ let pokemonRepository = (function() {
       pokeImage.src = pokemon.imageUrl;
       pokeHeight.innerHTML = 'Height: ' + pokemon.height;
       pokeType.innerHTML = 'Type: ' + pokemon.types;
-      pokeAbility.innerHTML = 'Ability: ' + pokemon.abilities;
+      pokeAbility.innerHTML = 'Ability: ' + pokemon.abilities.join(', ');
       modalClose.innerHTML = "X";
       showModal();
     });
