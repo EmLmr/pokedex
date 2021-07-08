@@ -72,8 +72,8 @@ let pokemonRepository = (function() {
     listItem.appendChild(pokemonButton);
     pokemonList.appendChild(listItem);
 
-     pokemonButton.addEventListener('click', function() { // the showDetails() function will be executed when the user clicks on the Pokemon's button
-       showDetails(pokemon);
+    pokemonButton.addEventListener('click', function() { // the showDetails() function will be executed when the user clicks on the Pokemon's button
+      showDetails(pokemon);
     })
   };
 
@@ -128,24 +128,24 @@ let pokemonRepository = (function() {
       pokeName.innerHTML = pokemon.name;
       pokeImage.src = pokemon.imageUrl;
       pokeHeight.innerHTML = 'Height: ' + pokemon.height;
-      pokeType.innerHTML = 'Type: ' + pokemon.types;
+      pokeType.innerHTML = 'Type: ' + pokemon.types.join(', ');
       pokeAbility.innerHTML = 'Ability: ' + pokemon.abilities.join(', ');
       modalClose.innerHTML = "X";
       showModal();
     });
   }
 
-// opens the modal by making it visible
+  // opens the modal by making it visible
   function showModal() {
     modalContainer.classList.add('is-visible');
   }
 
-// closes the modal
-function hideModal() {
+  // closes the modal
+  function hideModal() {
     modalContainer.classList.remove('is-visible');
   }
 
-  modalClose.addEventListener('click' , hideModal);
+  modalClose.addEventListener('click', hideModal);
 
   window.addEventListener('keydown', (e) => {
     let modalContainer = document.querySelector('#modal-container');
