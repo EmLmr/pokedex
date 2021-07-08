@@ -5,15 +5,12 @@ font-family: 'Press Start 2P', cursive;
 MAIN TEXT:
 font-family: 'IBM Plex Mono', monospace;
 */
-
-
 /* GENERAL SETUP */
 :root {
   --pkm-red: #FF0000;
   --pkm-red-dark: #CC0000;
   --pkm-blue: #3B4CCA;
   --pkm-yellow: #FFDE00;
-  --pkm-yellow-dark:  #B3A125;
   --dark-grey: #2f2828;
   --font-size-main: 16px;
   --heading-big: 35px;
@@ -77,7 +74,6 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
   margin: 5px 20px;
-
 }
 
 .pokemon-button {
@@ -97,7 +93,7 @@ button {
 
 /* MODAL - SHOWS POKEMON DETAILS */
 #modal-container {
-  display:none;
+  display: none;
 }
 
 #modal-container.is-visible {
@@ -129,15 +125,15 @@ button {
 
 .modal-close {
   float: right;
-  -webkit-appearance: none;
+  font-size: 20px;
+  color: var(--pkm-red);
+  cursor: pointer;
   border: 0;
   background: none;
-  color: #777;
-  text-decoration: underline;
 }
 
 .PokeImage {
-    width: 70%;
+  width: 70%;
 }
 
 /* MEDIA QUERIES */
@@ -155,12 +151,11 @@ button {
   }
 
   .PokeImage {
-      width: 50%;
+    width: 50%;
   }
 }
 
 @media all and (min-width: 671px) and (max-width: 975px) {
-
   .pokemon-list {
     grid-template-columns: 1fr 1fr;
   }
