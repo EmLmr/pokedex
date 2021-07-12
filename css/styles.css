@@ -69,11 +69,11 @@ button {
 
 /* MAIN CONTENT - POKEMON LIST */
 .pokemon-list {
-  display: grid;
   padding-left: 0;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
-  margin: 5px 20px;
+  margin: 5px 20px; */
 }
 
 .pokemon-button {
@@ -143,7 +143,7 @@ button {
   }
 
   .pokemon-list {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
   }
 
   p {
@@ -157,7 +157,7 @@ button {
 
 @media all and (min-width: 671px) and (max-width: 975px) {
   .pokemon-list {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
   }
 }
 
