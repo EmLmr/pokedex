@@ -137,13 +137,13 @@ button {
 }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 670px) {
+/* @media all and (max-width: 670px) {
   h1 {
     font-size: 25px;
   }
 
   .pokemon-list {
-    /* grid-template-columns: 1fr; */
+    grid-template-columns: 1fr;
   }
 
   p {
@@ -157,10 +157,10 @@ button {
 
 @media all and (min-width: 671px) and (max-width: 975px) {
   .pokemon-list {
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
   }
-}
+} */
 
 /* @media all and (max-width: 976px) {
 
-} */
+}
