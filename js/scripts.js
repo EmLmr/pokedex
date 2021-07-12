@@ -26,8 +26,6 @@ let pokemonRepository = (function() {
   let pokeAbility = document.createElement('p');
   pokeAbility.classList.add('PokeAbility');
 
-
-
   let pokemonList = [];
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -64,6 +62,7 @@ let pokemonRepository = (function() {
     let pokemonList = document.querySelector('.pokemon-list');
 
     let listItem = document.createElement('li');
+    listItem.classList.add('col');
 
     let pokemonButton = document.createElement('button');
     pokemonButton.innerText = pokemon.name;
