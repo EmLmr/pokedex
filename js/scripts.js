@@ -62,11 +62,11 @@ let pokemonRepository = (function() {
     let pokemonList = document.querySelector('.pokemon-list');
 
     let listItem = document.createElement('li');
-    listItem.classList.add('col');
+    listItem.classList.add('col', 'group-list-item');
 
     let pokemonButton = document.createElement('button');
     pokemonButton.innerText = pokemon.name;
-    pokemonButton.classList.add('pokemon-button');
+    pokemonButton.classList.add('pokemon-button', 'btn', 'btn-primary', 'data-toggle="button"', 'aria-pressed="false"');
     pokemonButton.id = 'open-modal';
     listItem.appendChild(pokemonButton);
     pokemonList.appendChild(listItem);

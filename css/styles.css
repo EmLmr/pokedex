@@ -41,11 +41,6 @@ body {
   background-color: var(--dark-grey);
 }
 
-li {
-  list-style: none;
-  margin: auto;
-}
-
 button {
   border-radius: 30px;
 }
@@ -68,14 +63,6 @@ button {
 }
 
 /* MAIN CONTENT - POKEMON LIST */
-.pokemon-list {
-  padding-left: 0;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
-  margin: 5px 20px; */
-}
-
 .pokemon-button {
   background-color: var(--pkm-blue);
   color: white;
@@ -83,12 +70,25 @@ button {
   padding: 20px;
   margin: 10px;
   text-transform: capitalize;
+  border-radius: 30px;
+  border: 2px solid grey;
 }
 
 .pokemon-button:hover,
 .pokemon-button:focus {
+  background-color: var(--pkm-blue);
+  color: white;
   cursor: pointer;
   opacity: 0.9;
+  border-color: var(--pkm-yellow);
+}
+
+.pokemon-button:not(:disabled):not(.disabled):active,
+.pokemon-button:not(:disabled):not(.disabled):focus{
+  color: var(--pkm-red);
+  background: var(--dark-grey);
+  border-color: var(--pkm-yellow);
+  box-shadow: 0 0 8px var(--pkm-yellow);
 }
 
 /* MODAL - SHOWS POKEMON DETAILS */
