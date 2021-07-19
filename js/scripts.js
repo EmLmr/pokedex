@@ -2,8 +2,8 @@
 let pokemonRepository = (function() {
 
   // Creates the modal
-  let modalContainer = document.querySelector('#modal-container');
-  let modal = document.querySelector('.modal');
+  let modalContainer = document.querySelector('#exampleModal');
+  let modal = document.querySelector('.modal-dialog');
 
   // Content to be displayed in the modal
   let modalClose = document.createElement('button');
@@ -66,8 +66,11 @@ let pokemonRepository = (function() {
 
     let pokemonButton = document.createElement('button');
     pokemonButton.innerText = pokemon.name;
-    pokemonButton.classList.add('pokemon-button', 'btn', 'btn-primary', 'data-toggle="button"', 'aria-pressed="false"');
-    pokemonButton.id = 'open-modal';
+    pokemonButton.classList.add('pokemon-button', 'btn', 'btn-primary');
+    // pokemonButton.id = 'open-modal';
+    pokemonButton.setAttribute('data-target', '#exampleModal');
+    pokemonButton.setAttribute('data-toggle', 'modal');
+
     listItem.appendChild(pokemonButton);
     pokemonList.appendChild(listItem);
 
@@ -149,7 +152,7 @@ let pokemonRepository = (function() {
 
   // pressing the ESC key closes the modal
   window.addEventListener('keydown', (e) => {
-    let modalContainer = document.querySelector('#modal-container');
+    let modalContainer = document.querySelector('#exampleModal');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();
     }
