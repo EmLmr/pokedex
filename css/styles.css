@@ -27,7 +27,7 @@ li {
 
 h1 {
   font-size: var(--heading-big);
-  text-transform: capitalize
+  text-transform: capitalize;
 }
 
 p {
@@ -53,9 +53,8 @@ button {
 }
 
 /* MAIN CONTENT - LOADING MESSAGE */
-.visible {
+.loading-message {
   color: white;
-  font-size: 50px;
 }
 
 .hidden {
@@ -63,6 +62,23 @@ button {
 }
 
 /* MAIN CONTENT - POKEMON LIST */
+ul {
+  padding: 50px;
+  list-style-type: none;
+}
+
+li {
+  flex: 1 1 0;
+  padding: 10px;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
 .pokemon-button {
   background-color: var(--pkm-blue);
   color: white;
@@ -92,7 +108,8 @@ button {
 }
 
 /* MODAL - SHOWS POKEMON DETAILS */
-#modal-container {
+
+/* #modal-container {
   display: none;
 }
 
@@ -134,7 +151,7 @@ button {
 
 .PokeImage {
   width: 70%;
-}
+} */
 
 /* MEDIA QUERIES */
 /* @media all and (max-width: 670px) {
@@ -160,7 +177,3 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 } */
-
-/* @media all and (max-width: 976px) {
-
-}
