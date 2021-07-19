@@ -107,51 +107,6 @@ li {
   box-shadow: 0 0 8px var(--pkm-yellow);
 }
 
-/* MODAL - SHOWS POKEMON DETAILS */
-
-/* #modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  display: block;
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  overflow: auto;
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.modal-close {
-  float: right;
-  font-size: 20px;
-  color: var(--pkm-red);
-  cursor: pointer;
-  border: 0;
-  background: none;
-}
-
-.PokeImage {
-  width: 70%;
-} */
 
 /* MEDIA QUERIES */
 /* @media all and (max-width: 670px) {
