@@ -63,7 +63,7 @@ button {
 
 /* MAIN CONTENT - POKEMON LIST */
 ul {
-  padding: 50px;
+  padding: 0;
   list-style-type: none;
 }
 
