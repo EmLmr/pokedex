@@ -46,7 +46,7 @@ button {
 }
 
 #logo {
-  max-height: 100px;
+  width: 100%;
 }
 
 #btn-back-to-top {
