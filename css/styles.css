@@ -13,7 +13,7 @@ font-family: 'IBM Plex Mono', monospace;
   --pkm-yellow: #FFDE00;
   --dark-grey: #2f2828;
   --font-size-main: 16px;
-  --heading-big: 35px;
+  --heading-big: 25px;
 }
 
 * {
@@ -45,10 +45,6 @@ button {
   border-radius: 30px;
 }
 
-#logo {
-  width: 100%;
-}
-
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -63,6 +59,10 @@ button {
   background-color: var(--pkm-red-dark);
   padding: 15px;
   margin-bottom: 20px;
+}
+
+#logo {
+  width: 100%;
 }
 
 /* MAIN CONTENT - LOADING MESSAGE */
