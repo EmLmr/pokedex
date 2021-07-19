@@ -45,6 +45,15 @@ button {
   border-radius: 30px;
 }
 
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: var(--pkm-red-dark);
+  color: white;
+}
+
 /* HEADER */
 .page-header {
   background-color: var(--pkm-red-dark);

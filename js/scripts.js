@@ -136,30 +136,6 @@ let pokemonRepository = (function() {
     modalBody.append(abilitiesElement);
   }
 
-  // // general function to close the modal
-  // function hideModal() {
-  //   modalContainer.classList.remove('is-visible');
-  // }
-  //
-  // // click event to close the modal
-  // modalClose.addEventListener('click', hideModal);
-  //
-  // // pressing the ESC key closes the modal
-  // window.addEventListener('keydown', (e) => {
-  //   let modalContainer = document.querySelector('#exampleModal');
-  //   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-  //     hideModal();
-  //   }
-  // });
-  //
-  // // clicking outside of the modal closes it
-  // modalContainer.addEventListener('click', (e) => {
-  //   let target = e.target;
-  //   if (target === modalContainer) {
-  //     hideModal();
-  //   }
-  // });
-
   return {
     add: add,
     getAll: getAll,
@@ -176,3 +152,29 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 200px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
