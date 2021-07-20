@@ -52,7 +52,7 @@ let pokemonRepository = (function() {
     pokemonButton.addEventListener('click', function() { // the showDetails() function will be executed when the user clicks on the Pokemon's button
       showDetails(pokemon);
     })
-  };
+  }
 
   // loads the Pokémon list from the API (name + url to details)
   function loadList() {
