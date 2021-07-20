@@ -92,7 +92,7 @@ li {
   align-items: center;
 }
 
-.pokemon-button {
+.btn-primary {
   background-color: var(--pkm-blue);
   color: white;
   width: 250px;
@@ -103,8 +103,8 @@ li {
   border: 2px solid grey;
 }
 
-.pokemon-button:hover,
-.pokemon-button:focus {
+.btn-primary:hover,
+.btn-primary:focus:active {
   background-color: var(--pkm-blue);
   color: white;
   cursor: pointer;
@@ -112,8 +112,12 @@ li {
   border-color: var(--pkm-yellow);
 }
 
-.pokemon-button:not(:disabled):not(.disabled):active,
-.pokemon-button:not(:disabled):not(.disabled):focus{
+.btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:hover {
   color: var(--pkm-red);
   background: var(--dark-grey);
   border-color: var(--pkm-yellow);
