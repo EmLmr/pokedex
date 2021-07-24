@@ -12,25 +12,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,500;1,200;1,500&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./src/img/favicon-32x32.png" type="image/png" />
-  <link href="dist/css/styles.min.css" rel="stylesheet" type="text/css" />
+  <link href="src/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <header class="page-header">
     <nav class="navbar justify-content-center">
-  <a class="navbar-brand" href="#">
-    <img src="./src/img/pokedex_logo.png"  alt="MyPokédex logo, written in yellow on a dark red background." id="logo" class="d-inline-block align-top" />
-  </a>
-</nav>
+      <a class="navbar-brand" href="#">
+        <img src="./src/img/pokedex_logo.png" alt="MyPokédex logo, written in yellow on a dark red background." id="logo" class="d-inline-block align-top" />
+      </a>
+    </nav>
+    <form class="form-inline justify-content-center">
+      <input class="form-control " id="searchBar" type="search" placeholder="&#x1F50E;&#xFE0E; Search Pokémon" aria-label="Search">
+    </form>
   </header>
 
   <main>
     <!-- MODAL !-->
     <div class="loading-message text-center">
-    <span class="sr-only">Loading...</span>
-    <p>Please wait...</p>
-    <div class="spinner-border" role="status">
-  </div>
+      <span class="sr-only">Loading...</span>
+      <p>Please wait...</p>
+      <div class="spinner-border" role="status">
+      </div>
 
     </div>
     <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal" aria-hidden="true">
@@ -48,7 +51,7 @@
         </div>
       </div>
     </div>
-      <!-- POKEMON LIST !-->
+    <!-- POKEMON LIST !-->
     <div class="container">
       <ul class="pokemon-list list-unstyled list-group"></ul>
     </div>
@@ -63,7 +66,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="./src/js/promise-polyfill.js"></script>
   <script src="./src/js/fetch.umd.js"></script>
-  <script src="./dist/scripts.min.js"></script>
+  <script src="./src/js/scripts.js"></script>
 </body>
 
 </html>

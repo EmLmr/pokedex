@@ -3,6 +3,7 @@ let pokemonRepository = (function() {
 
   let pokemonList = [];
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let searchInput = document.querySelector("#searchBar");
 
   // displays a loading message until the content has loaded
   function showLoadingMessage() {
@@ -125,6 +126,8 @@ let pokemonRepository = (function() {
     let typesElement = $('<p>' + 'Types : ' + item.types.join(', ') + '</p>');
     let abilitiesElement = $('<p>' + 'Abilities : ' + item.abilities.join(', ') + '</p>');
 
+
+
     // display the separate Pokémon details inside the modal
     modalTitle.append(nameElement);
     modalBody.append(imageElementFront);
@@ -134,6 +137,20 @@ let pokemonRepository = (function() {
     modalBody.append(typesElement);
     modalBody.append(abilitiesElement);
   }
+
+  // search bar
+  searchInput.addEventListener("input", function() {
+    let listPokemon = document.querySelectorAll("li");
+    let value = searchInput.value.toUpperCase();
+
+    listPokemon.forEach(function(pokemon) {
+      if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
+        pokemon.style.display = "";
+      } else {
+        pokemon.style.display = "none";
+      }
+    });
+  });
 
   return {
     add: add,
@@ -152,11 +169,13 @@ pokemonRepository.loadList().then(function() {
   });
 });
 
+
+
 //Get the button
 let mybutton = document.getElementById('btn-back-to-top');
 
 // When the user scrolls down 200px from the top of the document, show the button
-window.onscroll = function () {
+window.onscroll = function() {
   scrollFunction();
 };
 
